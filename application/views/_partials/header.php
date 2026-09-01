@@ -7,8 +7,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="<?= base_url('') ?>">Home</a>
-                <a class="nav-item nav-link" href="<?= base_url('/product') ?>">Produtos</a>
-                <a class="nav-item nav-link" href="<?= base_url('/order') ?>">Pedidos</a>
+                <a class="nav-item nav-link" href="<?= base_url('/product') ?>">Products</a>
+                <a class="nav-item nav-link" href="<?= base_url('/order') ?>">Orders</a>
             </div>
         </div>
     </nav>
