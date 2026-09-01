@@ -1,27 +1,27 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <?php $this->load->view('_partials/head'); ?>
 <body>
 <?php $this->load->view('_partials/header'); ?>
 <div class="container container-person mt-5 p-5">
     <?=write_message()?>
-    <h1>Produtos</h1>
+    <h1>Products</h1>
     <div class="col-md-12 mb-3">
         <div class="row">
-            <a class="btn btn-primary" href="<?= base_url('product/form/') ?>">Novo Produto</a>
+            <a class="btn btn-primary" href="<?= base_url('product/form/') ?>">New Product</a>
         </div>
     </div>
     <table id="product_table" class="table table-striped table-bordered table-responsive-sm" style="width:100%">
         <thead>
         <tr>
             <th>ID</th>
-            <th>Nome</th>
+            <th>Name</th>
             <th>SKU</th>
-            <th>Preço</th>
-            <th>Editar</th>
-            <th>Excluir</th>
+            <th>Price</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </tr>
             <?php }
         } else { ?>
-            <td class="text-center" colspan="6">Não há produtos</td>
+            <td class="text-center" colspan="6">No products found</td>
         <?php } ?>
         </tbody>
     </table>
@@ -46,5 +46,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php $this->load->view('_partials/product/delete_product_confirm_modal'); ?>
 <?php $this->load->view('_partials/scripts'); ?>
 </body>
-
 </html>

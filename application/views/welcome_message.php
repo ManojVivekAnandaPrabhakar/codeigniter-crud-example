@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <?php $this->load->view('_partials/head'); ?>
 <body>
 <?php $this->load->view('_partials/header'); ?>
@@ -12,19 +12,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     if(isset($order) && $order){
         foreach ($order as $pedido);
         $action_form = $action_form.$pedido->id ?>
-        <h1>Editar Pedido: <?= $pedido->id ?></h1>
+        <h1>Edit Order: <?= $pedido->id ?></h1>
     <?php } else { ?>
-        <h1>Novo Pedido</h1>
+        <h1>New Order</h1>
     <?php }
     if($products) { ?>
     <form id="form_make_order" method="post" action="<?=site_url($action_form)?>">
         <?php foreach ($products as $product) { ?>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4 col-xs-4"><b>Nome</b></div>
+                    <div class="col-sm-4 col-xs-4"><b>Name</b></div>
                     <div class="col-sm-3 col-xs-3"><b>SKU</b></div>
-                    <div class="col-sm-3 col-xs-3"><b>Preço</b></div>
-                    <div class="col-sm-2 col-xs-2"><b>Quantidade</b></div>
+                    <div class="col-sm-3 col-xs-3"><b>Price</b></div>
+                    <div class="col-sm-2 col-xs-2"><b>Quantity</b></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4 col-xs-4"><?= $product->nome ?></div>
@@ -36,13 +36,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         <?php } ?>
         <div class="mt-3">
-            <button class="btn btn-primary" type="submit">Criar pedido</button>
+            <button class="btn btn-primary" type="submit">Create Order</button>
         </div>
         <?php } else { ?>
-            <div class="col-sm-12 col-xs-12">Não há produtos</div>
+            <div class="col-sm-12 col-xs-12">No products found</div>
         <?php } ?>
 </div>
 <?php $this->load->view('_partials/scripts'); ?>
 </body>
-
 </html>
